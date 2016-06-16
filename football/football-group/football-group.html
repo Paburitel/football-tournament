@@ -1,0 +1,17 @@
+
+ 	<table  class="table text-center">
+ 		<tr>
+ 			<th colspan=2></th>
+ 			<th ng-repeat="namber in [1,2,3,4]" ng-bind="namber" class="text-center"></th>
+ 		</tr>
+ 		<tr ng-repeat="team in $ctrl.teams">
+ 			<td ng-bind="$index+1">   </td>
+ 			<td ng-bind="team.name"></td>
+ 			<td ng-repeat="game in team.games">
+ 				<span ng-if="game.id1 == game.id2">Х</span>
+ 				<span ng-if="game.played">
+ 				{{game.goals1}} : {{game.goals2}}</span>
+ 			</td>
+
+ 		</tr>
+ 	</table>

@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+ <html ng-app="footballTournament" ng-controller="footballTournament">
+ <head>
+	 <title>FootBall</title>
+	 <style>
+	 .special {
+	 	color: blue;
+	 }
+	 .weekend {
+	 	color: red;
+	 }
+	 
+	 </style>
+	 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	 <script src ="https://code.jquery.com/jquery-1.12.3.js"></script>
+	 
+	 <link rel="stylesheet" type="text/css" href="style.css">
+	 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular.js"></script>
+
+	  <link   href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" >
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+	 <script type='text/javascript' src="football-group/football-group.module.js"></script>
+	 <script type='text/javascript' src="football-group/football-group.component.js"></script>
+	 <script type='text/javascript' src="football-tournament.module.js"></script>
+	 <script type='text/javascript' src="football-tournament.controller.js"></script>
+
+</head>
+ <body>
+ 	<football-group data="teams">
+ 	</football-group>
+
+ 
+
+ 
+ </body>
+ 
+ </html>
