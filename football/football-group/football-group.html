@@ -1,10 +1,11 @@
 
+ 
  	<table  class="table text-center">
  		<tr>
  			<th colspan=2></th>
  			<th ng-repeat="namber in [1,2,3,4]" ng-bind="namber" class="text-center"></th>
  		</tr>
- 		<tr ng-repeat="team in $ctrl.teams">
+ 		<tr ng-repeat="team in $ctrl.teams" ng-class="{'active' : $ctrl.active==team.name}">
  			<td ng-bind="$index+1">   </td>
  			<td ng-bind="team.name"></td>
  			<td ng-repeat="game in team.games">

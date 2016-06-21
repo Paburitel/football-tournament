@@ -2,11 +2,12 @@ angular.module("footballGroup").component("footballGroup", {
 
 	templateUrl: "football-group/football-group.html",
 	bindings: {
-		teams: "=data"
+		teams: "=data",
+		active: "="
 	},
 	controller: function($scope){
 
-		console.log($scope);
+		// console.log($scope);
 		// $scope.teams = $scope.$parent.teams;
 
 		$scope.getGame = function(id1 , id2) {
