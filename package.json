@@ -1,0 +1,25 @@
+{
+    "name": "footballTournament",
+    "version": "0.0.1",
+    "description": "module to illustrate the football tournament 2016",
+    "author": "Nik Maligin <nik13nik82@gmail.com>",
+    "contributors": [{
+    "name": "Foo Bar",
+    "email": "foo.bar@example.com"
+  }],
+
+  "scripts": { 
+  },
+
+  "main": "footballTournament.js",
+
+  "devDependencies": {
+    "http-server": "^0.9.0",
+    "bower": "^1.7.7"
+  },
+  "scripts": {
+    "start": "http-server -a localhost -c-1 ./app",
+    "prestart": "npm install"
+  }
+
+}
