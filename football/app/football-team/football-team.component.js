@@ -2,7 +2,7 @@ angular.module("footballTeam").component("footballTeam", {
 
 	templateUrl: "/football-team/football-team.html",
 	bindings: {
-		team: "="
+		crew: "=teamRef"
 	},
 	controller: function($scope){
 
