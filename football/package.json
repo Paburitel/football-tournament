@@ -8,9 +8,6 @@
     "email": "foo.bar@example.com"
   }],
 
-  "scripts": { 
-  },
-
   "main": "footballTournament.js",
 
   "devDependencies": {
