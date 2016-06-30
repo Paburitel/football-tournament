@@ -1,47 +1,59 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
- <html ng-app="footballTournament" ng-controller="footballTournament">
- <head>
-	 <title>FootBall</title>
-	 <style>
-	 .special {
-	 	color: blue;
-	 }
-	 </style>
-	 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	 <link rel="stylesheet" type="text/css" href="style.css">
-
-	 <script src ="/bower_components/jquery/dist/jquery.js"></script>
-	
-	 <script type="text/javascript" src="/bower_components/angular/angular.js"></script>
-	  <script src ="/bower_components/angular-route/angular-route.js"></script>
-
-	 <link   href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" >
-     <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-
-     <script type='text/javascript' src="/football-team/football-team.module.js"></script>
-     <script type='text/javascript' src="/football-team/football-team.component.js"></script>
-
-
-	 <script type='text/javascript' src="/football-group/football-group.module.js"></script>
-	 <script type='text/javascript' src="/football-group/football-group.scoreFactory.js"></script>
-	 <script type='text/javascript' src="/football-group/football-group.component.js"></script>
-	 <script type='text/javascript' src="/football-tournament.module.js"></script>
-	 <script type='text/javascript' src="/football-tournament.controller.js"></script>
+<html ng-app="footballTournament">
+<head>
+<title>FootBall</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <base href="http://localhost:8080/">
+
+<link rel="stylesheet" type="text/css" href="style.css">
+<link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<script src="/bower_components/jquery/dist/jquery.js"></script>
+<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<script src="/bower_components/angular/angular.js"></script>
+<script src="/bower_components/angular-route/angular-route.js"></script>
+
+<script src="/football-team/football-team.module.js"></script>
+<script src="/football-team/football-team.component.js"></script>
+
+<script src="/football-group/football-group.module.js"></script>
+<script src="/football-group/football-group.scoreFactory.factory.js"></script>
+<script src="/football-group/football-group.component.js"></script>
+
+<script src="/football-tournament.module.js"></script>
+<script src="/football-tournament.config.js"></script>
+<script src="/football-tournament.controller.js"></script>
+
+<style>
+.special {
+  color: blue;
+}
+</style>
 </head>
- <body>
- 	<div>
- 	<p>Выберите  команду:</p>
- 	<input type="text"ng-model="activeTeam">
- 	<input type="radio" id="wales" name="teams" value="Уэльс" ng-model="activeTeam"><label for="wales">Уэльс</label></input>
- 	<input type="radio" id="russia" name="teams" value="Россия" ng-model="activeTeam"><label for="russia">Россия</label></input>
- 	<input type="radio" id="ingland" name="teams" value="Англия" ng-model="activeTeam"><label for="ingland">Англия</label></input>
- 	<input type="radio" id="slov" name="teams" value="Словакия" ng-model="activeTeam"><label for="slov">Словакия</label></input>
- 	<input type="checkbox" ng-init="visibel=true" id="visible" ng-model="visibel"><label for="tabel">Показать таблицу</label>
- 	</div>
- 	<div ng-view></div>
- 	
- 
- </body>
- 
- </html>
+<body>
+  <div>
+    <p>Выберите команду:</p>
+    <input type="text" ng-model="activeTeam">
+
+    <input type="radio" name="teams" value="Уэльс" ng-model="activeTeam">
+    Уэльс
+    </input>
+    <input type="radio" name="teams" value="Россия" ng-model="activeTeam">
+    Россия
+    </input>
+    <input type="radio" name="teams" value="Англия" ng-model="activeTeam">
+    Англия
+    </input>
+    <input type="radio" name="teams" value="Словакия" ng-model="activeTeam">
+    Словакия
+    </input>
+    <input type="checkbox" ng-init="visible=true" ng-model="visible">
+    Показать таблицу
+    </input>
+  </div>
+  <div ng-view ng-if="visible"></div>
+
+</body>
+
+</html>
